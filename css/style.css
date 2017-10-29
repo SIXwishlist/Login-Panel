@@ -8,9 +8,6 @@ body{
 	background-color: #E0E0E0;
 }
 
-.container{
-}
-
 .container-body{
 	position: absolute;
     
@@ -54,7 +51,6 @@ body{
     font-weight: 500;
     margin-bottom: 10px;
     color: #fff;
-    letter-spacing: 1;
     color: #E0E0E0;
 }
 
@@ -100,8 +96,8 @@ button[type="submit"]{
 	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
 	background-image: -o-linear-gradient(top, #3498db, #2980b9);
 	background-image: linear-gradient(to bottom, #3498db, #2980b9);
-	-webkit-border-radius: 18;
-	-moz-border-radius: 18;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
 	border-radius: 18px;
 	-webkit-box-shadow: 0px 1px 3px #666666;
 	-moz-box-shadow: 0px 1px 3px #666666;
@@ -135,8 +131,8 @@ button[type="submit"]:hover{
 	background-image: -ms-linear-gradient(top, #34d9a2, #2bb8b8);
 	background-image: -o-linear-gradient(top, #34d9a2, #2bb8b8);
 	background-image: linear-gradient(to bottom, #34d9a2, #2bb8b8);
-	-webkit-border-radius: 10;
-	-moz-border-radius: 10;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
 	border-radius: 10px;
 	-webkit-box-shadow: 0px 1px 3px #666666;
 	-moz-box-shadow: 0px 1px 3px #666666;
