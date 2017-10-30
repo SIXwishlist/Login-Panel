@@ -26,8 +26,17 @@ body{
 
 .header p{
 	margin-bottom: 20px;
-	color: rgba(0,0,0,0.6);
+	color: #EEEEEE;
     text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+	animation: type 5s steps(100) infinite;
+	overflow: hidden;
+	white-space: pre;
+	letter-spacing: 1px;
+}
+
+@keyframes type {
+	from { width: 0% }
+	to { width: 100% }
 }
 
 .form{
