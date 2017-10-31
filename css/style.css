@@ -95,7 +95,7 @@ input[type="checkbox"]:checked {
 	color: blue;
 }
 
-button[type="submit"]{
+input[type="submit"]{
 	float: left;
 	margin-top: 15px;
 	margin-right: 20px;
@@ -121,7 +121,7 @@ button[type="submit"]{
 	text-transform: uppercase;
 }
 
-button[type="submit"]:hover{
+input[type="submit"]:hover{
 	background: #3cb0fd;
 	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
 	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);

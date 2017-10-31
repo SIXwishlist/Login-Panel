@@ -8,7 +8,6 @@
 
 </head>
 <body>
-
 	<div class="container">
 		<div class="container-body">
 			
@@ -25,16 +24,14 @@
 				<input type="checkbox">
 				<span>Remember me</span>
 				<br>
-				<button type="submit"> Sign In</button>
-				<button class="btn">
-					<a href="">Forget Password?</a>
-				</button>
+<!--				<button type="submit"> Sign In</button>-->
+                <input type="submit" value="Sign In">
+                <button class="btn">
+                    <a href="">Forget Password?</a>
+                </button>
 			</form>
 
 		</div>
-	</div>
-	<div id="test">
-
 	</div>
 </body>
 </html>
