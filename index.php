@@ -1,21 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: shawo
- * Date: 10/31/2017
- * Time: 12:42 PM
- */
-if ($_REQUEST){
-    $user = $_REQUEST['txtpassword'];
-    $pass = $_REQUEST['txtpassword'];
-
-//    echo $user."<br>", $pass;
-}
-
-
-
-?>
-
 <html>
 <head>
 	<title>Login Panel</title>
@@ -26,7 +8,7 @@ if ($_REQUEST){
 	<div class="container">
 		<div class="container-body">
 			
-			<form class="form" method="post" action="">
+			<form class="form" method="post" action="userverify.php">
 				<div class="header">
 					<p>Admin Panel</p>
 				</div>
@@ -49,5 +31,3 @@ if ($_REQUEST){
 	</div>
 </body>
 </html>
-
-<!--Developed by Mahmudul Hassan Navid-->
