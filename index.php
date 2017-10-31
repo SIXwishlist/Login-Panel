@@ -7,7 +7,7 @@
 <body>
 	<div class="container">
 		<div class="container-body">
-			
+
 			<form class="form" method="post" action="userverify.php">
 				<div class="header">
 					<p>Admin Panel</p>
@@ -21,8 +21,8 @@
 				<input type="checkbox">
 				<span>Remember me</span>
 				<br>
-<!--				<button type="submit"> Sign In</button>-->
-                <input type="submit" value="Sign In">
+				<button type="submit"> Sign In</button>
+<!--                <input type="submit" value="Sign In">-->
                 <button class="btn">
                     <a href="">Forget Password?</a>
                 </button>
