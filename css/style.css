@@ -70,8 +70,8 @@ body{
 	font-size: 14px;
 }
 
-input[type="text"],
-input[type="password"]{
+.username-input,
+.password-input{
 	padding: 5px;
 	border: 1px solid #9E9E9E;
 	border-radius: 8px;
@@ -184,4 +184,151 @@ button[type="submit"]:hover{
 
 .btn a:active {
     color: #01579B;
+}
+
+/*user page design*/
+
+.header-content{
+	width: 100%;
+	background-color: #466368;
+	padding: 25px 0px;
+}
+
+.header-content span{
+	margin-left: 60px;
+	font-family: Tahoma;
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+.logout-button{
+	float: right;
+	margin-right: 60px;
+	padding: 5px 25px;
+	font-size: 12px;
+	font-weight: 600;
+	border: transparent;
+	border-radius: 15px;
+}
+
+.user-input{
+	width: 100%;
+	background-color: #685060;
+}
+
+.user-input form{
+	padding: 40px 50px;
+}
+
+.user-input form fieldset{
+	padding: 10px;
+}
+
+.user-input form fieldset legend{
+	font-size: 18px;
+	font-weight: 700;
+	color: white;
+	letter-spacing: 1px;
+}
+
+.left-input{
+	width: 50%;
+	float: left;
+}
+
+.left-input label{
+	font-size: 20px;
+	font-weight: 700;
+	color: white;
+	margin-left: 10px;
+}
+
+.date-picker{
+	height: 25px;
+	width: 180px;
+	margin-top: 10px;
+	border: transparent;
+	border-radius: 5px;
+	padding: 3px 10px;
+	letter-spacing: 2px;
+	text-align: center;
+	margin-left: 5px;
+}
+
+.amount-input{
+	height: 25px;
+	width: 180px;
+	margin-left: 14px;
+	margin-top: 10px;
+	border: transparent;
+	padding: 3px 10px;
+	letter-spacing: 2px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.right-input{
+	width: 50%;
+	float: left;
+}
+
+.right-input label{
+	font-size: 20px;
+	font-weight: 700;
+	color: white;
+	margin-left: 10px;
+}
+
+.right-input textarea{
+	height: 50px;
+	width: 250px;
+	margin-left: 14px;
+	margin-top: 10px;
+	border: transparent;
+	padding: 3px 10px;
+	letter-spacing: 2px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.user-button{
+	text-align: center;
+	margin: 0px auto;
+	margin-top: 20px;
+}
+
+.confirm-button{
+	padding: 5px 40px;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	border: transparent;
+	border-radius: 15px;
+}
+
+.user-table{
+	margin-top: 20px;
+	padding: 0px 100px;
+}
+
+.user-table table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: center;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #CFD8DC;
+}
+.table-header{
+	border-bottom: 2px solid #293f50;
 }
