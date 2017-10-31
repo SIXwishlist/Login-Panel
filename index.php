@@ -5,7 +5,6 @@
 	<title>Login Panel</title>
 	<!--CSS-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
 </head>
 <body>
 	<div class="container">
@@ -30,7 +29,6 @@
                     <a href="">Forget Password?</a>
                 </button>
 			</form>
-
 		</div>
 	</div>
 </body>
