@@ -5,14 +5,14 @@
  * Date: 10/31/2017
  * Time: 12:42 PM
  */
-
 if ($_REQUEST){
-    $user=$_REQUEST['txtusername'];
-    $pass=$_REQUEST['txtpassword'];
+    $user = $_REQUEST['txtpassword'];
+    $pass = $_REQUEST['txtpassword'];
 
-    print_r($user,$pass);
-
+//    echo $user."<br>", $pass;
 }
+
+
 
 ?>
 
@@ -26,7 +26,7 @@ if ($_REQUEST){
 	<div class="container">
 		<div class="container-body">
 			
-			<form class="form" method="post" action="test.php">
+			<form class="form" method="post" action="">
 				<div class="header">
 					<p>Admin Panel</p>
 				</div>
