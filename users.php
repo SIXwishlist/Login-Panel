@@ -6,6 +6,10 @@
  * Time: 2:34 PM
  */
 session_start();
+
+$u = $_SESSION['un'];
+echo $u;
+
 ?>
 <a href="logout.php" >Logout</a>
 
