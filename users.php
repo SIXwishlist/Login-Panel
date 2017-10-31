@@ -9,6 +9,9 @@ session_start();
 
 $u = $_SESSION['un'];
 echo $u;
+if(empty($u)){
+    header("Location: index.php?error=2");
+}
 
 ?>
 <a href="logout.php" >Logout</a>

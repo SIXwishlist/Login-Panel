@@ -25,7 +25,7 @@
 <!--                    --><?php //if(isset($_GET['success'])&& $_GET['success']==1) echo "You have registered successfully." ?>
                     <?php if(isset($_GET['success'])&& $_GET['success']==2) echo "You have logged out successfully." ?>
                     <?php if(isset($_GET['error'])&& $_GET['error']==1) echo "Email/Password Wrong." ?>
-                    <?php if(isset($_GET['error'])&& $_GET['error']==2) echo "you should login first." ?>
+                    <?php if(isset($_GET['error'])&& $_GET['error']==2) echo "You should login first." ?>
                 </div>
 				<button type="submit"> Sign In</button>
 <!--                <input type="submit" value="Sign In">-->
