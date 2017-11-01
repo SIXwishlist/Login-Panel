@@ -6,26 +6,29 @@
  * Time: 2:34 PM
  */
 session_start();
-if(empty($_SESSION['usern'])){
+if(empty($_SESSION['usern']))
+{
     header("Location: index.php?error=2");
 }
 $uname = $_SESSION['usern'];
-include ("db.php");
-
-//$insertquery =
-
+$uid = $_SESSION["useri"];
+if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
+{
+    $usertk=$_REQUEST["usrtk"];
+    $userdes=$_REQUEST["usrdes"];
+    include ("db.php");
+    $insertq = "insert into usersinfo (users_id,usersinfo_date,usersinfo_amount,usersinfo_description) values ($uid,'$uid',$usertk,'$userdes')";
+    mysqli_query($conn,$insertq);
+    header('Location: users.php?success=1');
+}
+else
 
 ?>
-
+<?php if(isset($_GET['success']) &&$_GET['success']==1) echo "Added new Entry"; ?>
 <form action="" method="get">
-    <input type="text" name="usertk">
-    <input type="text" name="usrcmt">
+    amount :<input type="text" name="usrtk"><br>
+    des: <input type="text" name="usrdes"><br>
     <button type="submit">Submit</button>
 </form>
-
-<?php
-$t1=$_REQUEST["usertk"];
-echo $t1;
-?>
 <a href="logout.php" >Logout</a><br>
 

@@ -16,12 +16,13 @@ if (isset($_REQUEST['txtusername'])&& isset($_REQUEST['txtpassword']))
     $result = mysqli_query($conn,$q);
     $row = mysqli_fetch_array($result);
     mysqli_close($conn);
-        if($row['users_username'] == "$uname" && $row["users_Password"] == "$upass")
-        {
-            $_SESSION['usern']=$uname;
-            $_SESSION['userp']=$upass;
-        header("Location:users.php");
-        }
+    if($row['users_username'] == "$uname" && $row["users_Password"] == "$upass")
+    {
+        $_SESSION['usern'] = $uname;
+        $_SESSION['userp'] = $upass;
+        $_SESSION["useri"] = $row["users_id"];
+    header("Location:users.php");
+    }
     else
         header("Location: index.php?error=1");
 }
