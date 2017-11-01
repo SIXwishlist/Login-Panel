@@ -19,16 +19,31 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
     include ("db.php");
     $insertq = "insert into usersinfo (users_id,usersinfo_date,usersinfo_amount,usersinfo_description) values ($uid,'$uid',$usertk,'$userdes')";
     mysqli_query($conn,$insertq);
-    header('Location: users.php?success=1');
-}
-else
 
+
+//    header('Location: users.php?success=1');
+
+}
 ?>
+<a href="logout.php" >Logout</a><br>
 <?php if(isset($_GET['success']) &&$_GET['success']==1) echo "Added new Entry"; ?>
 <form action="" method="get">
     amount :<input type="text" name="usrtk"><br>
     des: <input type="text" name="usrdes"><br>
     <button type="submit">Submit</button>
 </form>
-<a href="logout.php" >Logout</a><br>
+<tbody>
+<?php
+include ("db.php");
+$selectq = "select * from userinfo where users_id = '$uid'";
+$result = mysqli_query($conn,$selectq);
+while ($row = mysqli_fetch_array($result)>0)
+{
+    echo "<tr><td>";
+        echo $selectq['usersinfo_amount'];
+        echo "</td><td>";
+}
+?>
+</tbody>
+
 
