@@ -185,8 +185,3 @@ button[type="submit"]:hover{
 .btn a:active {
     color: #01579B;
 }
-.alert{
-	color: #fff;
-	padding-top: 10%;
-	padding-left:10% ;
-}
