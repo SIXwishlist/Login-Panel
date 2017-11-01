@@ -6,8 +6,8 @@
  * Time: 12:42 PM
  */
 session_start();
-if(!empty($_REQUEST["txtusername"]) && !empty($_REQUEST["txtpassword"]))
-//if (isset($_REQUEST['txtusername'])&& isset($_REQUEST['txtpassword']))
+//if(!empty($_REQUEST["txtusername"]) && !empty($_REQUEST["txtpassword"]))
+if (isset($_REQUEST['txtusername'])&& isset($_REQUEST['txtpassword']))
 {
     $uname= $_REQUEST['txtusername'];
     $upass= $_REQUEST['txtpassword'];
@@ -19,7 +19,6 @@ if(!empty($_REQUEST["txtusername"]) && !empty($_REQUEST["txtpassword"]))
     mysqli_close($conn);
         if($row['users_username'] == "$uname" && $row["users_Password"] == "$upass")
         {
-            echo $uname,$upass;
             $_SESSION['un']=$uname;
             $_SESSION['up']=$upass;
         header("Location:users.php");
@@ -27,7 +26,7 @@ if(!empty($_REQUEST["txtusername"]) && !empty($_REQUEST["txtpassword"]))
     else
         header("Location: index.php?error=1");
 
-
 }
+
 else
     header("Location: index.php?error=2");
