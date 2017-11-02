@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2017 at 07:39 AM
+-- Generation Time: Nov 02, 2017 at 10:09 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -43,6 +43,20 @@ INSERT INTO `users` (`users_id`, `users_username`, `users_Name`, `users_Password
 (1, 'admin', 'admin', '1234'),
 (2, 'dp', 'Saumya', '1');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `usersinfo`
+--
+
+CREATE TABLE `usersinfo` (
+  `usersinfo_id` int(11) NOT NULL,
+  `users_id` int(11) NOT NULL,
+  `usersinfo_date` text NOT NULL,
+  `usersinfo_amount` int(11) NOT NULL,
+  `usersinfo_description` text
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
@@ -54,6 +68,13 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`users_id`);
 
 --
+-- Indexes for table `usersinfo`
+--
+ALTER TABLE `usersinfo`
+  ADD PRIMARY KEY (`usersinfo_id`),
+  ADD KEY `userstousersinfo` (`users_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -62,6 +83,21 @@ ALTER TABLE `users`
 --
 ALTER TABLE `users`
   MODIFY `users_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `usersinfo`
+--
+ALTER TABLE `usersinfo`
+  MODIFY `usersinfo_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `usersinfo`
+--
+ALTER TABLE `usersinfo`
+  ADD CONSTRAINT `userstousersinfo` FOREIGN KEY (`users_id`) REFERENCES `users` (`users_id`);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
