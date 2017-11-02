@@ -19,10 +19,8 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
     include ("db.php");
     $insertq = "insert into usersinfo (users_id,usersinfo_date,usersinfo_amount,usersinfo_description) values ($uid,'$uid',$usertk,'$userdes')";
     mysqli_query($conn,$insertq);
-
-
-//    header('Location: users.php?success=1');
-
+    mysqli_close();
+    header('Location: users.php?success=1');
 }
 ?>
 <a href="logout.php" >Logout</a><br>
@@ -32,18 +30,41 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
     des: <input type="text" name="usrdes"><br>
     <button type="submit">Submit</button>
 </form>
-<tbody>
+
 <?php
 include ("db.php");
-$selectq = "select * from userinfo where users_id = '$uid'";
+$selectq = "select * from usersinfo where users_id = '$uid'";
 $result = mysqli_query($conn,$selectq);
-while ($row = mysqli_fetch_array($result)>0)
-{
-    echo "<tr><td>";
-        echo $selectq['usersinfo_amount'];
-        echo "</td><td>";
-}
+$row = mysqli_fetch_array($result);
+
 ?>
-</tbody>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php  while ($row)
+        {
+//            echo "<tr><td>";
+//                echo $uname;
+//            echo "</td>";
+//            echo "<tr><td>";
+//            echo $row["usersinfo_amount"];
+//            echo "</td>";
+
+            echo "<tr><td>";
+                echo "name";
+            echo "</td><td>";
+            echo <>
+
+        }
+        ?>
+    </tbody>
+</table>
 
 
