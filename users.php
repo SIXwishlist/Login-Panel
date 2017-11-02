@@ -44,7 +44,7 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
     <?php
     include ("db.php");
     $selectq = "select * from usersinfo where users_id = '$uid'";
-    $sumq = "select SUM(usersinfo_amount) from usersinfo";
+    $sumq = "select SUM(usersinfo_amount) from usersinfo where users_id = '$uid' ";
 
     $selectresult = mysqli_query($conn,$selectq);
     $sumresult = mysqli_query($conn,$sumq);
@@ -72,12 +72,5 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
     </tbody>
 </table>
 
-<?php
-//include ("db.php");
-//$selectq = "select SUM(usersinfo_amount) from usersinfo";
-//$result = mysqli_query($conn,$selectq);
-//$row = mysqli_fetch_array($result);
-//echo $row['SUM(usersinfo_amount)'];
-//?>
 
 
