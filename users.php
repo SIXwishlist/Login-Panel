@@ -31,9 +31,6 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
     <button type="submit">Submit</button>
 </form>
 
-<?php
-
-?>
 <table>
     <thead>
         <tr>
@@ -47,20 +44,40 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
     <?php
     include ("db.php");
     $selectq = "select * from usersinfo where users_id = '$uid'";
-    $result = mysqli_query($conn,$selectq);
-    while ($row = mysqli_fetch_array($result)) {
+    $sumq = "select SUM(usersinfo_amount) from usersinfo";
+
+    $selectresult = mysqli_query($conn,$selectq);
+    $sumresult = mysqli_query($conn,$sumq);
+
+    $sumrow = mysqli_fetch_array($sumresult);
+
+    while ($selectrow = mysqli_fetch_array($selectresult)) {
         echo "<tr><td>";
         echo $uname;
         echo "</td><td>";
         echo "date";
         echo "</td><td>";
-        echo $row["usersinfo_amount"];
+        echo $selectrow["usersinfo_amount"];
         echo "</td><td>";
-        echo $row["usersinfo_description"];
+        echo $selectrow["usersinfo_description"];
         echo "</td></tr>";
     }
     ?>
+    <tr>
+        <td></td>
+        <td><?php echo "Total =" ?></td>
+        <td><?php echo $sumrow['SUM(usersinfo_amount)']; ?></td>
+        <td></td>
+    </tr>
     </tbody>
 </table>
+
+<?php
+//include ("db.php");
+//$selectq = "select SUM(usersinfo_amount) from usersinfo";
+//$result = mysqli_query($conn,$selectq);
+//$row = mysqli_fetch_array($result);
+//echo $row['SUM(usersinfo_amount)'];
+//?>
 
 
