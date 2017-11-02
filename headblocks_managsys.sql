@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 02, 2017 at 10:09 AM
+-- Generation Time: Nov 02, 2017 at 12:26 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -40,8 +40,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`users_id`, `users_username`, `users_Name`, `users_Password`) VALUES
-(1, 'admin', 'admin', '1234'),
-(2, 'dp', 'Saumya', '1');
+(1, 'admin', 'admin', 'headblocks'),
+(2, 'dp', 'Saumya', '1'),
+(3, 'sis', 'Shahidul', '2'),
+(4, 'mh', 'navid', '3'),
+(5, 'mis', 'Misbah', '4');
 
 -- --------------------------------------------------------
 
@@ -82,12 +85,12 @@ ALTER TABLE `usersinfo`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `users_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `users_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `usersinfo`
 --
 ALTER TABLE `usersinfo`
-  MODIFY `usersinfo_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `usersinfo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Constraints for dumped tables
 --
