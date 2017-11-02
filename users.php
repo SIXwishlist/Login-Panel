@@ -47,10 +47,17 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
     <div class="container">
         <header class="header-content">
             <span><?php echo $userName ?></span>
-            <button class="logout-button"><a href="logout.php" >Logout</a><br></button>
+            <!-- <button class="logout-button"><a href="logout.php">Log Out</a></button> -->
+            <div class="logout-button">
+                <a href="logout.php">Log Out</a>
+            </div>
+            
         </header>
-        <?php if(isset($_GET['success']) &&$_GET['success']==1) echo "Added new Entry"; ?>
         <div class="user-input">
+            <?php 
+            if(isset($_GET['success']) &&$_GET['success']==1) 
+                echo "<div class='entry-confirm-notify'>***<span>Added new Entry</span></div>"; 
+            ?>
             <form action="" method="get">
                 <fieldset>
                     <legend>Entry</legend>
@@ -104,6 +111,12 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
                     echo "</td></tr>";
                 }
                 ?>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
                 <tr>
                     <td></td>
                     <td><?php echo "Total =" ?></td>

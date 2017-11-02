@@ -77,7 +77,7 @@ body{
 	border-radius: 8px;
 	margin-left: 10px;
 	width: 200px;
-	height: 25px;
+	height: 30px;
 	margin-bottom: 10px;
 	font-weight: 600;
 	text-align: center;	
@@ -95,7 +95,21 @@ input[type="checkbox"]:checked {
 	color: blue;
 }
 
-button[type="submit"]{
+.alert{
+	text-align: center;
+	font-style: italic;
+	font-weight: 600;
+	font-size: 14px;
+	color: #D50000;
+	letter-spacing: 1px;
+}
+
+.alert-notify{
+	color: #CFD8DC;
+	font-size: 14px;
+}
+
+.submit-button{
 	float: left;
 	margin-top: 15px;
 	margin-right: 20px;
@@ -121,7 +135,7 @@ button[type="submit"]{
 	text-transform: uppercase;
 }
 
-button[type="submit"]:hover{
+.submit-button:hover{
 	background: #3cb0fd;
 	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
 	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
@@ -208,10 +222,65 @@ button[type="submit"]:hover{
 	float: right;
 	margin-right: 60px;
 	padding: 5px 25px;
-	font-size: 12px;
-	font-weight: 600;
 	border: transparent;
 	border-radius: 15px;
+	cursor: pointer;
+	background: #ff0000;
+	background-image: -webkit-linear-gradient(top, #ff0000, #8a2d32);
+	background-image: -moz-linear-gradient(top, #ff0000, #8a2d32);
+	background-image: -ms-linear-gradient(top, #ff0000, #8a2d32);
+	background-image: -o-linear-gradient(top, #ff0000, #8a2d32);
+	background-image: linear-gradient(to bottom, #ff0000, #8a2d32);
+}
+
+.logout-button:hover{
+	background: #850f0f;
+	background-image: -webkit-linear-gradient(top, #850f0f, #e62222);
+	background-image: -moz-linear-gradient(top, #850f0f, #e62222);
+	background-image: -ms-linear-gradient(top, #850f0f, #e62222);
+	background-image: -o-linear-gradient(top, #850f0f, #e62222);
+	background-image: linear-gradient(to bottom, #850f0f, #e62222);
+	text-decoration: none;
+}
+
+.logout-button a{
+	font-size: 12px;
+	font-weight: 600;
+	text-decoration: none;
+	letter-spacing: 1px;
+	color: #FAFAFA;
+}
+
+.logout-button a:link {
+    color: #FAFAFA;
+}
+
+.logout-button a:visited {
+    color: #FAFAFA;
+}
+
+.logout-button a:hover {
+    color: #FAFAFA;
+}
+
+.logout-button a:active {
+    color: #FAFAFA;
+}
+
+.entry-confirm-notify{
+	text-align: center;
+	letter-spacing: 1px;
+	color: #D50000;
+	font-size: 20px;
+	font-style: italic;
+	padding-top: 15px;
+	margin-bottom: -20px;
+}
+
+.entry-confirm-notify span{
+	font-size: 18px;
+	color: #CFD8DC;
+	padding-left: 5px;
 }
 
 .user-input{
@@ -301,12 +370,30 @@ button[type="submit"]:hover{
 }
 
 .confirm-button{
-	padding: 5px 40px;
+	padding: 8px 55px;
+	color: #ECEFF1;
 	font-size: 14px;
-	font-weight: 600;
-	letter-spacing: 1px;
+	font-weight: 900;
+	letter-spacing: 2px;
 	border: transparent;
 	border-radius: 15px;
+	cursor: pointer;
+	background: #FAFAFA;
+  background-image: -webkit-linear-gradient(top, #34e08d, #379454);
+  background-image: -moz-linear-gradient(top, #34e08d, #379454);
+  background-image: -ms-linear-gradient(top, #34e08d, #379454);
+  background-image: -o-linear-gradient(top, #34e08d, #379454);
+  background-image: linear-gradient(to bottom, #34e08d, #379454);
+}
+
+.confirm-button:hover{
+	background: #50c267;
+  background-image: -webkit-linear-gradient(top, #50c267, #1cd657);
+  background-image: -moz-linear-gradient(top, #50c267, #1cd657);
+  background-image: -ms-linear-gradient(top, #50c267, #1cd657);
+  background-image: -o-linear-gradient(top, #50c267, #1cd657);
+  background-image: linear-gradient(to bottom, #50c267, #1cd657);
+	text-decoration: none;
 }
 
 .user-table{

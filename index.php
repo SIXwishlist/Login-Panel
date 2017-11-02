@@ -21,12 +21,13 @@
             <span>Remember me</span>
             <br>
             <div class="alert">
+                *
 <!--                --><?php //if(isset($_GET['success'])&& $_GET['success']==1) echo "You have registered successfully." ?>
-                <?php if(isset($_GET['success'])&& $_GET['success']==2) echo "You have logged out successfully." ?>
-                <?php if(isset($_GET['error'])&& $_GET['error']==1) echo "Email/Password Wrong." ?>
-                <?php if(isset($_GET['error'])&& $_GET['error']==2) echo "You should login first." ?>
+                <?php if(isset($_GET['success'])&& $_GET['success']==2) echo "<span class='alert-notify'>You have logged out successfully.</span>" ?>
+                <?php if(isset($_GET['error'])&& $_GET['error']==1) echo "<span class='alert-notify'>Email/Password Wrong.</span>" ?>
+                <?php if(isset($_GET['error'])&& $_GET['error']==2) echo "<span class='alert-notify'>You should login first.</span>" ?>
             </div>
-            <button type="submit"> Sign In</button>
+            <button type="submit" class="submit-button"> Sign In</button>
             <button class="btn">
                 <a href="">Forget Password?</a>
             </button>
