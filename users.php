@@ -32,10 +32,6 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
 </form>
 
 <?php
-include ("db.php");
-$selectq = "select * from usersinfo where users_id = '$uid'";
-$result = mysqli_query($conn,$selectq);
-$row = mysqli_fetch_array($result);
 
 ?>
 <table>
@@ -48,22 +44,22 @@ $row = mysqli_fetch_array($result);
         </tr>
     </thead>
     <tbody>
-        <?php  while ($row)
-        {
-//            echo "<tr><td>";
-//                echo $uname;
-//            echo "</td>";
-//            echo "<tr><td>";
-//            echo $row["usersinfo_amount"];
-//            echo "</td>";
-
-            echo "<tr><td>";
-                echo "name";
-            echo "</td><td>";
-            echo <>
-
-        }
-        ?>
+    <?php
+    include ("db.php");
+    $selectq = "select * from usersinfo where users_id = '$uid'";
+    $result = mysqli_query($conn,$selectq);
+    while ($row = mysqli_fetch_array($result)) {
+        echo "<tr><td>";
+        echo $uname;
+        echo "</td><td>";
+        echo "date";
+        echo "</td><td>";
+        echo $row["usersinfo_amount"];
+        echo "</td><td>";
+        echo $row["usersinfo_description"];
+        echo "</td></tr>";
+    }
+    ?>
     </tbody>
 </table>
 
