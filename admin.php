@@ -35,6 +35,7 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <!--    <script>-->
 <!--        $( function() {-->
 <!--            $( "#from-date" ).datepicker({-->
@@ -43,6 +44,22 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
 <!--            $('#from-date').datepicker('setDate', 'today');-->
 <!--        } );-->
 <!--    </script>-->
+
+    <script type="text/javascript">
+        $("#btnPrint").live("click", function () {
+            var divContents = $("#printTable").html();
+            var printWindow = window.open('', '', 'height=400,width=800');
+            printWindow.document.write('<html><head><title>Head-Blocks Research Lab</title>');
+            printWindow.document.write('<link rel="stylesheet" type="text/css" href="css/style.css">');
+            printWindow.document.write('<style>table, th, td { border: 0px solid black; }</style>');
+            printWindow.document.write('</head><body><div style="margin: 10px 25%">');
+            printWindow.document.write(divContents);
+            printWindow.document.write('</div></body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        });
+    </script>
+
 </head>
 <body>
 <div class="container">
@@ -79,7 +96,7 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
 <!--            </div>-->
 <!--        </form>-->
     </div>
-    <div class="user-table">
+    <div class="user-table" id="printTable">
         <table>
             <thead>
             <tr>
@@ -126,6 +143,10 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
             </tr>
             </tbody>
         </table>
+    </div>
+
+    <div class="user-button">
+        <button class="confirm-button" type="submit" id="btnPrint">Print</button>
     </div>
 </div>
 </body>
