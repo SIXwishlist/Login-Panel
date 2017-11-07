@@ -102,7 +102,7 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
 
             while ($selectrow = mysqli_fetch_array($selectresult)) {
                 echo "<tr><td>";
-                echo $uname;
+                echo $selectrow["users_id"];
                 echo "</td><td>";
                 echo $selectrow["usersinfo_date"];
                 echo "</td><td>";
