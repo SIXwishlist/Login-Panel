@@ -91,7 +91,7 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
                 <tbody>
                 <?php
                 include ("db.php");
-                $selectq = "select * from usersinfo where users_id = '$uid'";
+                $selectq = "select * from usersinfo INNER JOIN users  ON usersinfo.users_id = users.users_id where users.users_id = '$uid'";
                 $sumq = "select SUM(usersinfo_amount) from usersinfo where users_id = '$uid' ";
 
                 $selectresult = mysqli_query($conn,$selectq);
@@ -101,7 +101,7 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
 
                 while ($selectrow = mysqli_fetch_array($selectresult)) {
                     echo "<tr><td>";
-                    echo $uname;
+                    echo $selectrow["users_Name"];
                     echo "</td><td>";
                     echo $selectrow["usersinfo_date"];
                     echo "</td><td>";
