@@ -45,20 +45,21 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
 <!--        } );-->
 <!--    </script>-->
 
-    <script type="text/javascript">
-        $("#btnPrint").live("click", function () {
-            var divContents = $("#printTable").html();
-            var printWindow = window.open('', '', 'height=400,width=800');
-            printWindow.document.write('<html><head><title>Head-Blocks Research Lab</title>');
-            printWindow.document.write('<link rel="stylesheet" type="text/css" href="css/style.css">');
-            printWindow.document.write('<style>table, th, td { border: 0px solid black; }</style>');
-            printWindow.document.write('</head><body><div style="margin: 10px 25%">');
-            printWindow.document.write(divContents);
-            printWindow.document.write('</div></body></html>');
-            printWindow.document.close();
-            printWindow.print();
-        });
-    </script>
+   <script type="text/javascript">
+
+       $("#btnPrint").live("click", function () {
+           var divContents = $("#printTable").html();
+           var printWindow = window.open('', '', 'height=400,width=800');
+           printWindow.document.write('<html><head><title>Head-Blocks Research Lab</title>');
+           printWindow.document.write('<style>table{ margin-top: 20px; padding: 0px 25%; } .user-table table { font-family: arial, sans-serif; border-collapse: collapse; width: 100%; } td, th {border: 0px solid; text-align: center; padding: 8px; }</style>');
+           printWindow.document.write('</head><body>');
+           printWindow.document.write(divContents);
+           printWindow.document.write('</body></html>');
+           printWindow.document.close();
+           printWindow.print();
+       });
+
+   </script>
 
 </head>
 <body>
