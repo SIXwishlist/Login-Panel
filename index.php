@@ -7,6 +7,7 @@
 <body>
 <div class="container">
     <div class="container-body">
+<!--        verify to userverify page-->
         <form class="form" method="post" action="userverify.php">
             <div class="header">
                 <p>Admin Panel</p>
@@ -21,9 +22,10 @@
             <span>Remember me</span>
             <br>
             <div class="alert">
+<!--                alert for login-->
 <!--                --><?php //if(isset($_GET['success'])&& $_GET['success']==1) echo "You have registered successfully." ?>
                 <?php if(isset($_GET['success'])&& $_GET['success']==2) echo "<span class='alert-notify'>You have logged out successfully.</span>" ?>
-                <?php if(isset($_GET['error'])&& $_GET['error']==1) echo "<span class='alert-notify'>Email/Password Wrong.</span>" ?>
+                <?php if(isset($_GET['error'])&& $_GET['error']==1) echo "<span class='alert-notify'>Username/Password Wrong.</span>" ?>
                 <?php if(isset($_GET['error'])&& $_GET['error']==2) echo "<span class='alert-notify'>You should login first.</span>" ?>
             </div>
             <button type="submit" class="submit-button"> Sign In</button>
