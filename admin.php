@@ -45,6 +45,7 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
 <!--        } );-->
 <!--    </script>-->
 
+
     <script type="text/javascript">
         $("#btnPrint").live("click", function () {
             var divContents = $("#printTable").html();
