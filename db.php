@@ -7,10 +7,10 @@
  */
 
 $localhost="localhost";
-$root="root";
-$password="";
-//$root="hex";
-//$password="janina32";
+//$root="root";
+//$password="";
+$root="hex";
+$password="janina32";
 $db="headblocks_managsys";
 
 $conn = mysqli_connect($localhost,$root,$password,$db);
