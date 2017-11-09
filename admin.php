@@ -110,7 +110,7 @@ if (!empty($_REQUEST["usrtk"]) || !empty($_REQUEST["usrdes"]))
             <tbody>
             <?php
             include ("db.php");
-            $selectq = "select * from usersinfo INNER JOIN users  ON usersinfo.users_id = users.users_id";
+            $selectq = "select * from usersinfo INNER JOIN users  ON usersinfo.users_id = users.users_id Order By usersinfo_date";
             $sumq = "select SUM(usersinfo_amount) from usersinfo";
 
             $selectresult = mysqli_query($conn,$selectq);
